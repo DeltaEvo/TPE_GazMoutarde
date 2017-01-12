@@ -5,8 +5,22 @@
     <title>Title</title>
 </head>
 <body>
-    {% for slide in slides%}
-        {{ slide.data | safe }}
-    {% endfor %}
+    {% macro class(name, value) -%}
+        {% if value -%}
+            {{ name }}="{{ value }}"
+        {%- endif %}
+    {%- endmacro %}
+
+    <div id="impress">
+        {% for slide in slides%}
+            <div class="step" {{ class('data-x' , slide.vars.x) }} {{ class('data-y' , slide.vars.y) }}
+                                {{ class('data-z' , slide.vars.z) }} {{ class('data-rotate-x' , slide.vars.rotateX) }}
+                                {{ class('data-rotate-y' , slide.vars.rotateY) }} {{ class('data-rotate-z' , slide.vars.rotateZ) }}
+                                {{ class('data-scale' , slide.vars.scale) }}>
+                {{ slide.data | safe }}
+            </div>
+        {% endfor %}
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>

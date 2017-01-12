@@ -17,7 +17,7 @@ class MarkdownItVariables {
                     if(matchSet){
                         const [, name, value] = matchSet;
                         state.env[name] = value;
-                        arr.splice(i, 2);
+                        arr.splice(i, 1);
                     } else if(matchGet)
                         do {
                             const [, name] = matchGet;
@@ -27,7 +27,7 @@ class MarkdownItVariables {
                             matchGet = child.content.match(VAR_GET_REGEX);
                         } while (matchGet);
                 });
-                if(e.children.length == 0)
+                if(e.children.length == 0 || e.children.reduce((prev, e) => prev && e.type == 'softbreak', true))
                     state.tokens.splice(state.tokens.indexOf(e) - 1, 3);
             });
     }
