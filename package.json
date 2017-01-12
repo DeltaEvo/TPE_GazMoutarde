@@ -4,7 +4,7 @@
   "description": " TPE 1ère S sur le Gaz Moutarde ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dist": "OUTPUT_DIR=dist node ./build"
   },
   "repository": {
     "type": "git",
@@ -13,5 +13,10 @@
   "bugs": {
     "url": "https://github.com/DeltaEvo/TPE_GazMoutarde/issues"
   },
-  "homepage": "https://github.com/DeltaEvo/TPE_GazMoutarde#readme"
+  "homepage": "https://github.com/DeltaEvo/TPE_GazMoutarde#readme",
+  "devDependencies": {
+    "fs-promise": "^1.0.0",
+    "markdown-it": "^8.2.2",
+    "nunjucks": "^3.0.0"
+  }
 }
