@@ -1,3 +1,4 @@
+"use strict";
 const VAR_SET_REGEX = /@(\S+)\s*=\s*(\S.*)/;
 const VAR_GET_REGEX = /@(\S+)/;
 
@@ -15,12 +16,13 @@ class MarkdownItVariables {
                     const matchSet = child.content.match(VAR_SET_REGEX);
                     let matchGet = child.content.match(VAR_GET_REGEX);
                     if(matchSet){
-                        const [, name, value] = matchSet;
+                        const name = matchSet[1];
+                        const value = matchSet[2];
                         state.env[name] = value;
                         arr.splice(i, 1);
                     } else if(matchGet)
                         do {
-                            const [, name] = matchGet;
+                            const  name = matchGet[1];
                             if(!state.env[name])
                                 throw new Error("Undefined variable name ${name}");
                             child.content = child.content.replace(`@${name}`, state.env[name]);
