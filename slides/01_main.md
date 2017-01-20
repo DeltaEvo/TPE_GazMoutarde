@@ -4,3 +4,4 @@
 @rotateY = -90
 @scale = 4
 # TPE 1ère: le gaz moutarde
+Par David Duarte, Violette Cullati et Hugo Coulon
