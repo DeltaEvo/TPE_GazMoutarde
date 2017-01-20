@@ -20,7 +20,7 @@
 
     <div id="impress">
         {% for slide in slides %}
-        <div id={{ slide.name }}" class="step" {{ class('data-x' , slide.vars.x) }} {{ class('data-y' , slide.vars.y) }}
+        <div id="{{ slide.name }}" class="step" {{ class('data-x' , slide.vars.x) }} {{ class('data-y' , slide.vars.y) }}
                                 {{ class('data-z' , slide.vars.z) }} {{ class('data-rotate-x' , slide.vars.rotateX) }}
                                 {{ class('data-rotate-y' , slide.vars.rotateY) }} {{ class('data-rotate-z' , slide.vars.rotateZ) }}
                                 {{ class('data-scale' , slide.vars.scale) }}>

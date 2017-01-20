@@ -22,7 +22,7 @@ class MarkdownItVariables {
                         arr.splice(i, 1);
                     } else if(matchGet)
                         do {
-                            const  name = matchGet[1];
+                            const name = matchGet[1];
                             if(!state.env[name])
                                 throw new Error("Undefined variable name ${name}");
                             child.content = child.content.replace(`@${name}`, state.env[name]);
