@@ -32,7 +32,7 @@ function readSlides() {
                         .then(content => {
                             const env = {};
                             const data = markdown.render(content , env);
-                            return { data, vars: env }
+                            return { data, vars: env, name: path.basename(file.path, '.md') }
                         })
                 )
             );
@@ -40,8 +40,10 @@ function readSlides() {
 }
 
 function compileTemplate(slides) {
+  const rslides = slides.reverse();
+  console.log(rslides , slides);
     return new Promise((resolve, reject) => {
-        return nunjucks.render("index.nunjucks" , { slides } , (err , res) => {
+        return nunjucks.render("index.nunjucks" , { slides: rslides } , (err , res) => {
             if(err)
                 reject(err);
             else
