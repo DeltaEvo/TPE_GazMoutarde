@@ -4,6 +4,7 @@ const fs = require("fs-promise");
 
 const markdown = new (require("markdown-it"))('commonmark');
 markdown.use(require("./MarkdownItVariables") );
+markdown.use(require("markdown-it-container"), 'left-align' );
 
 const ROOT_DIR = path.join(__dirname, '..');
 const OUTPUT_DIR = path.join(ROOT_DIR , process.env.OUTPUT_DIR);
@@ -51,11 +52,13 @@ function readSlides() {
                         .then(content => {
                             const env = {};
                             const data = markdown.render(content , env);
-                            return { data, vars: env, name: path.basename(file.path, '.md') }
+                            const p = path.relative(SLIDES_DIR , file.path);
+
+                            return { data, vars: env, name: p.substring(0 , p.length - path.extname(p).length) }
                         })
                 )
             );
-        });
+        }).then((slides) => slides.sort((a , b) => a.name.localeCompare(b.name)));
 }
 
 function relSlide(slides, slide , attr) {

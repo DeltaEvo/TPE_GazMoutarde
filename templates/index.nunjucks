@@ -6,8 +6,17 @@
   <style>
     .step {
       width: 100vw;
-      height: 100vh;
       text-align: center;
+    }
+
+    .left-align {
+        text-align: left;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .fullscreen {
+        height: 100vh;
     }
   </style>
 </head>
@@ -20,11 +29,13 @@
 
     <div id="impress">
         {% for slide in slides %}
-        <div id="{{ slide.name }}" class="step" {{ class('data-x' , slide.vars.x) }} {{ class('data-y' , slide.vars.y) }}
-                                {{ class('data-z' , slide.vars.z) }} {{ class('data-rotate-x' , slide.vars.rotateX) }}
-                                {{ class('data-rotate-y' , slide.vars.rotateY) }} {{ class('data-rotate-z' , slide.vars.rotateZ) }}
-                                {{ class('data-scale' , slide.vars.scale) }}>
-                {{ slide.data | safe }}
+        <div id="{{ slide.name }}" class="step {% if slide.vars.fullscreen -%} fullscreen {%- endif %}"
+                {{ class('data-x' , slide.vars.x) }} {{ class('data-y' , slide.vars.y) }}
+                {{ class('data-z' , slide.vars.z) }} {{ class('data-rotate-x' , slide.vars.rotateX) }}
+                {{ class('data-rotate-y' , slide.vars.rotateY) }} {{ class('data-rotate-z' , slide.vars.rotateZ) }}
+                {{ class('data-scale' , slide.vars.scale) }}>
+
+                    {{ slide.data | safe }}
           </div>
         {% endfor %}
     </div>
