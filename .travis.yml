@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+- stable
+
+script: bash .travis/ghpages.sh
+env:
+  global:
+  - COMMIT_AUTHOR_EMAIL: "deltaduartedavid@gmail.com"
