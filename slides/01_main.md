@@ -1,6 +1,6 @@
 @scale = 4
 @z = 1000
-@rotateX = -90
+@rotateX = -85
 # TPE 1ère: le gaz moutarde
 
 

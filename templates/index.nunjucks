@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Gaz Moutarde</title>
+  <meta charset="UTF-8">
+  <title>Gaz Moutarde</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   <style>
     .step {
       width: 100vw;
@@ -15,8 +18,33 @@
         margin: 0 auto;
     }
 
+    .center * {
+        margin: 0 auto;
+    }
+
     .fullscreen {
         height: 100vh;
+    }
+
+    .white {
+      color: white;
+    }
+  
+    #background {
+      transform: translateX(-50%) translateY(-50%) translateZ(-1px);
+      display: flex;
+    }
+
+    #background > img {
+      height: 4970px;
+      width: 7880px;
+      margin: 0 600px;
+    }
+
+    /* Dirty hack */
+    #\30 1_main.past {
+      opacity: 0;
+      transition: opacity 500ms ease-in-out;
     }
   </style>
 </head>
@@ -26,7 +54,7 @@
             {{ name }}="{{ value }}"
         {%- endif %}
     {%- endmacro %}
-
+    
     <div id="impress">
         {% for slide in slides %}
         <div id="{{ slide.name }}" class="step {% if slide.vars.fullscreen -%} fullscreen {%- endif %}"
@@ -38,6 +66,11 @@
                     {{ slide.data | safe }}
           </div>
         {% endfor %}
+       
+        <div id="background">
+          <img src="../static/img/hospital.jpg" />
+          <img src="../static/img/war.jpg" />
+        </div>
     </div>
     <script src="app.js"></script>
 </body>

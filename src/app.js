@@ -1,7 +1,9 @@
 import 'impress.js'
-//import '../vendor/GLmol'
 
 impress().init();
-document.onload = () => {
-  const molecules = document.getElementsByTagName('mol');
+
+const molecules = document.querySelectorAll('[mol]');
+for (let mol of molecules){
+  console.log('mol', mol);
 }
+console.log(molecules);

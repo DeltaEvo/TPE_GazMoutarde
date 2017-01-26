@@ -2,9 +2,13 @@ const nunjucks = require("nunjucks");
 const path = require("path");
 const fs = require("fs-promise");
 
-const markdown = new (require("markdown-it"))('commonmark');
+const markdown = new (require("markdown-it"))();
 markdown.use(require("./MarkdownItVariables") );
-markdown.use(require("markdown-it-container"), 'left-align' );
+markdown.use(require("./MDL"));
+const mcontainer = require("markdown-it-container");
+markdown.use(mcontainer, 'left-align' );
+markdown.use(mcontainer, 'center' );
+markdown.use(mcontainer, 'white' );
 
 const ROOT_DIR = path.join(__dirname, '..');
 const OUTPUT_DIR = path.join(ROOT_DIR , process.env.OUTPUT_DIR);
@@ -54,7 +58,7 @@ function readSlides() {
                             const data = markdown.render(content , env);
                             const p = path.relative(SLIDES_DIR , file.path);
 
-                            return { data, vars: env, name: p.substring(0 , p.length - path.extname(p).length) }
+                            return { data, vars: env, name: p.substring(0 , p.length - path.extname(p).length).trim() }
                         })
                 )
             );
