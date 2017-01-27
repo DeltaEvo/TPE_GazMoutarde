@@ -2,7 +2,7 @@
 @fullscreen = true
 
 ::: white
-# Les propriétés du gaz moutarde
+# Le gaz moutarde
 ## Synthèses
 :::
 
