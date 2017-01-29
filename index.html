@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Gaz Moutarde</title>
+  <meta charset="UTF-8">
+  <title>Gaz Moutarde</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   <style>
     .step {
       width: 100vw;
@@ -15,17 +18,46 @@
         margin: 0 auto;
     }
 
+    .center * {
+        margin: 0 auto;
+    }
+
     .fullscreen {
         height: 100vh;
+    }
+
+    .white {
+      color: white;
+    }
+  
+    #background {
+      transform: translateX(-50%) translateY(-50%) translateZ(-1px);
+      display: flex;
+    }
+
+    #background > img {
+      height: 4970px;
+      width: 7880px;
+      margin: 0 600px;
+    }
+
+    /* Dirty hack */
+    #\30 1_main.past {
+      opacity: 0;
+      transition: opacity 500ms ease-in-out;
+    }
+
+    img[alt="Chlorméthine] {
+        height: 100px;
     }
   </style>
 </head>
 <body>
-
+    
     <div id="impress">
         <div id="01_main" class="step "
                  
-                data-z="1000" data-rotate-x="-90"
+                data-z="1000" data-rotate-x="-85"
                  
                 data-scale="4">
 
@@ -65,10 +97,139 @@
                  
                 >
 
-                    <h1>Les propriétés du Gaz Moutarde</h1>
+                    <div class="white">
+<h1>Le gaz moutarde</h1>
 <h2>Synthèses</h2>
+</div>
+<div class="center">
+<table class="mdl-data-table mdl-js-data-table">
+<thead>
+<tr>
+<th style="text-align:center">DATE</th>
+<th style="text-align:center">CHIMISTE(S)</th>
+<th style="text-align:center">EQUATION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1860</td>
+<td style="text-align:center">Frederick Guthrie</td>
+<td style="text-align:center">SCl₂ + 2C₂H₄ → C₄H₈Cl₂S</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">(LOST) LOmmel &amp; STeinkopf</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1917</td>
+<td style="text-align:center">André Job et Gabriel Bertrand</td>
+<td style="text-align:center">S₂Cl₂ + 2C₂H₄ → C₄H₈Cl₂S + S</td>
+</tr>
+</tbody>
+</table>
+</div>
 
           </div>
+        <div id="03_GazMoutarde/02_Propriétés" class="step fullscreen"
+                data-x="2400" data-y="1200"
+                 
+                 
+                >
+
+                    <div class="white">
+<h1>Le gaz moutarde</h1>
+<h2>Propriétés</h2>
+</div>
+<div class="center">
+<table class="mdl-data-table mdl-js-data-table">
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Nom</td>
+<td style="text-align:center">sulfure de 2,2'‑dichlorodiéthyle</td>
+</tr>
+<tr>
+<td style="text-align:center">Formule brute</td>
+<td style="text-align:center">C₄H₈Cl₂S</td>
+</tr>
+<tr>
+<td style="text-align:center">Apparence forme impure</td>
+<td style="text-align:center">liquide brunâtre et huileux</td>
+</tr>
+<tr>
+<td style="text-align:center">Apparence forme pure</td>
+<td style="text-align:center">liquide incolore, huileux</td>
+</tr>
+<tr>
+<td style="text-align:center">Masse molaire (g/mol)</td>
+<td style="text-align:center">159,08</td>
+</tr>
+<tr>
+<td style="text-align:center">T° de fusion (°C)</td>
+<td style="text-align:center">13,5</td>
+</tr>
+<tr>
+<td style="text-align:center">T° d'ébulition (°C)</td>
+<td style="text-align:center">216</td>
+</tr>
+<tr>
+<td style="text-align:center">Famille</td>
+<td style="text-align:center">Thioéthers</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+          </div>
+        <div id="03_GazMoutarde/03_Effets" class="step "
+                data-x="2400" 
+                 
+                 
+                >
+
+                    <div class="white">
+<h1>Le Gaz Moutarde</h1>
+<h2>Les effets sur le corps et l'environnement</h2>
+</div>
+<div class="center">
+<p><img src="static/img/sulfonium.png" alt="sulfonium"></p>
+</div>
+
+          </div>
+        <div id="04_MoutardesAzotées/01_Propriétés" class="step fullscreen"
+                data-x="-1200" 
+                 
+                 
+                >
+
+                    <h1>Les moutardes azotées</h1>
+<h2>Propriétés</h2>
+
+          </div>
+        <div id="04_MoutardesAzotées/02_Chlorméthine" class="step fullscreen"
+                data-x="-2400" 
+                 
+                 
+                >
+
+                    <h1>Les moutardes azotées</h1>
+<h2>La Chlorméthine</h2>
+<div class="center">
+<p><img src="static/img/Mechlorethamine.png" alt="Chlorméthine"></p>
+</div>
+
+          </div>
+       
+        <div id="background">
+          <img src="static/img/hospital.jpg" />
+          <img src="static/img/war.jpg" />
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
