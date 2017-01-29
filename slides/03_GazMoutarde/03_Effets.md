@@ -6,5 +6,5 @@
 :::
 
 ::: center
-![sulfonium](../static/img/sulfonium.png)
+![sulfonium](static/img/sulfonium.png)
 :::

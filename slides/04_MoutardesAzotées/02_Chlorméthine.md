@@ -5,5 +5,5 @@
 ## La Chlorméthine
 
 ::: center
-![Chlorméthine](../static/img/Mechlorethamine.png)
+![Chlorméthine](static/img/Mechlorethamine.png)
 :::

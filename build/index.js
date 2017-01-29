@@ -11,6 +11,7 @@ markdown.use(mcontainer, 'center' );
 markdown.use(mcontainer, 'white' );
 
 const ROOT_DIR = path.join(__dirname, '..');
+const STATIC_DIR = path.join(ROOT_DIR, 'static');
 const OUTPUT_DIR = path.join(ROOT_DIR , process.env.OUTPUT_DIR);
 const SLIDES_DIR = path.join(ROOT_DIR , 'slides');
 
@@ -46,6 +47,12 @@ fs.ensureDir(OUTPUT_DIR)
         console.error(`Cannot create output directory: ${e}`);
         process.exit(-1);
     });
+
+fs.copy(STATIC_DIR, path.join(OUTPUT_DIR, 'static'))
+  .catch(e => {
+    console.error(`Cannot copy static dir ${e} `);
+    process.exit(-1);
+  })
 
 function readSlides() {
     return fs.walk(SLIDES_DIR)

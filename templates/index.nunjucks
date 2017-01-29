@@ -72,8 +72,8 @@
         {% endfor %}
        
         <div id="background">
-          <img src="../static/img/hospital.jpg" />
-          <img src="../static/img/war.jpg" />
+          <img src="static/img/hospital.jpg" />
+          <img src="static/img/war.jpg" />
         </div>
     </div>
     <script src="app.js"></script>
