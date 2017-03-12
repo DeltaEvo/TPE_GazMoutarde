@@ -1,4 +1,4 @@
-@right = 03_GazMoutarde/06_Oeil
+@right = 03_GazMoutarde/05_Oeil
 @down = 03_GazMoutarde/02_Synthèses
 
 ::: white

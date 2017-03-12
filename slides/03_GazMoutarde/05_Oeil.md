@@ -1,5 +1,5 @@
 @right = 02_Plan
-@down = 03_GazMoutarde/05_Vesicules
+@down = 03_GazMoutarde/02_Synthèses
 
 ::: white
 # Le Gaz Moutarde
@@ -7,5 +7,6 @@
 :::
 
 ::: center
+![oeil](static/img/oeil.png)
 ![ester](static/img/ester.png)
 :::
