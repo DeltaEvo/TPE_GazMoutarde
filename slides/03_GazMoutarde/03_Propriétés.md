@@ -1,5 +1,5 @@
-@right = 03_GazMoutarde/01_Synthèses
-@down = 03_GazMoutarde/O1_Synthèses
+@right = 03_GazMoutarde/02_Synthèses
+@down = 03_GazMoutarde/O2_Synthèses
 @fullscreen = true
 
 ::: white
@@ -19,4 +19,5 @@
 | T° d'ébulition (°C)    | 216    |
 | Famille                | Thioéthers |
 
+![Formule](static/img/GazMoutarde.png)
 :::

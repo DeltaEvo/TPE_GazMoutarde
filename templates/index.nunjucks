@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Gaz Moutarde</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <link rel="stylesheet" href="static/css/MaterialIcons.css">
+  <link rel="stylesheet" href="static/css/material.css">
+  <script defer src="static/js/material.min.js"></script>
   <style>
+		p {
+			padding-top: 10px;
+		}
     .step {
       width: 100vw;
       text-align: center;

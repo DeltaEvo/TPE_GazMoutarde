@@ -1,4 +1,5 @@
 @scale = 2
+@bottom = 01_main
 # Plan
 ::: left-align
 1. Le gaz moutarde une arme destructrice
