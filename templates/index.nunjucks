@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="static/css/material.css">
   <script defer src="static/js/material.min.js"></script>
   <style>
-		body {
+		body, ul, ol, p, td{
 			font-size: 20px;
 		}
 		p {
