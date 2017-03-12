@@ -89,7 +89,7 @@ function relSlide(slides, slide , attr) {
 
     return slide.vars[relative.ref] =
         ((target ? parseInt(relSlide(slides , target, attr) || 0) : 0)
-            + parseInt(slide.vars[relative.ref] || 0) + 1200 * relative.multiplier);
+            + parseInt(slide.vars[relative.ref] || 0) + (1200 * relative.multiplier));
 }
 
 

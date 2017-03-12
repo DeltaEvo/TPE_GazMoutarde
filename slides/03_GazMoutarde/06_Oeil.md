@@ -1,4 +1,4 @@
-@left = 03_GazMoutarde/03_Propriétés
+@right = 02_Plan
 @down = 03_GazMoutarde/02_Synthèses
 
 ::: white

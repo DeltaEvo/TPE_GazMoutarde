@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="static/css/material.css">
   <script defer src="static/js/material.min.js"></script>
   <style>
+		body {
+			font-size: 20px;
+		}
 		p {
 			padding-top: 10px;
 		}
@@ -34,7 +37,7 @@
     }
   
     #background {
-      transform: translateX(-50%) translateY(-50%) translateZ(-1px);
+      transform: translateX(-50%) translateY(-30%) translateZ(-1px);
       display: flex;
     }
 
