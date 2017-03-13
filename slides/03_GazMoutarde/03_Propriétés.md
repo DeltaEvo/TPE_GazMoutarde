@@ -18,6 +18,7 @@
 | T° de fusion (°C)      | 13,5   |
 | T° d'ébulition (°C)    | 216    |
 | Famille                | Thioéthers |
-
+::: right
 ![Formule](static/img/GazMoutarde.png)
+:::
 :::

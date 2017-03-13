@@ -9,7 +9,7 @@ const mcontainer = require("markdown-it-container");
 markdown.use(mcontainer, 'left-align' );
 markdown.use(mcontainer, 'center' );
 markdown.use(mcontainer, 'white' );
-
+markdown.use(mcontainer, 'right' );
 const ROOT_DIR = path.join(__dirname, '..');
 const STATIC_DIR = path.join(ROOT_DIR, 'static');
 const OUTPUT_DIR = path.join(ROOT_DIR , process.env.OUTPUT_DIR);
